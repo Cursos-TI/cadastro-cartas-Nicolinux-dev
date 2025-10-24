@@ -1,8 +1,12 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
+
 // Tema 1 - Cadastro das cartas
-// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações.
+
+// Objetivo: No nível novato você deve criar as cartas representando as cidades utilizando scanf para entrada de dados e printf para exibir as informações. (Feito!)
+
+/* Objetivo: No nível básico, você criou um sistema para cadastrar as cartas do Super Trunfo. Agora, vamos adicionar mais detalhes e complexidade ao nosso jogo! Neste nível, você implementará a lógica para calcular e exibir duas novas propriedades importantes para cada cidade: a densidade populacional e o PIB per capita. */
 
 int main()
 {
@@ -25,6 +29,10 @@ int main()
   float area2; // Área da cidade 2
   float pib1;  // PIB da cidade 1
   float pib2;  // PIB da cidade 2
+  float densidade1;  // Densidade populacional da cidade 1
+  float densidade2;  // Densidade populacional da cidade 2
+  float pib_capita1; // PIB per capita da cidade 1
+  float pib_capita2; // PIB per capita da cidade 2
 
   // Apresentação do jogo
   printf("\nBem-vindo ao jogo Super Trunfo!\n");
@@ -69,6 +77,11 @@ int main()
   printf("Digite a quantidade de pontos turísticos: ");
   scanf("%i", &pontos1);
 
+  //Cálculo da carta 1
+  densidade1 = populacao1 / area1;
+  pib_capita1 = pib1 / populacao1;
+
+
   // Área para entrada de dados da carta 2
   printf("\n=== Segunda Carta ===\n");
 
@@ -92,6 +105,11 @@ int main()
 
   printf("Digite a quantidade de pontos turísticos: ");
   scanf("%i", &pontos2);
+
+  //Cálculo da carta 2
+  densidade2 = populacao2 / area2;
+  pib_capita2 = pib2 / populacao2;
+
   printf("\n === Cadastro concluído! ===\n");
 
   // Exibição carta 1
@@ -103,6 +121,8 @@ int main()
   printf("Área: %.2f km²\n", area1);
   printf("PIB: %.2f Bilhões de reais\n", pib1);
   printf("Pontos turísticos: %d\n", pontos1);
+  printf("Densidade populacional: %f\n", densidade1);
+  printf("PIB per capita: %f\n", pib_capita1);
 
   // Exibição carta 2
   printf("\n=== Dados da Carta 2 ===\n");
@@ -113,6 +133,8 @@ int main()
   printf("Área: %.2f km²\n", area2);
   printf("PIB: %.2f Bilhões de reais\n", pib2);
   printf("Pontos turísticos: %d\n", pontos2);
+  printf("Densidade populacional: %f\n", densidade2);
+  printf("PIB per capita: %f\n", pib_capita2);
 
   printf("\n ===============================\n");
 
